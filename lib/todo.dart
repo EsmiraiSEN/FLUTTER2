@@ -1,11 +1,12 @@
 class Todo {
-
+  static int _counter = 0;
+  
   final int id;
   final String title;
   bool isDone;
 
   Todo({required this.title})
-      : id = ++_counter,
+      : id = ++Todo._counter,
         isDone = false;
 
   String get status => isDone ? 'выполнено' : 'в процессе';
